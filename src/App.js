@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { ethers } from "ethers";
+import { useEffect, useState } from "react";
+import ContractAddress from "./components/Contract";
+import Abi from "./components/Abi.json";
+import GetValues from "./components/GetValues";
+import SetValues from "./components/SetValues";
+import AddValues from "./components/AddValues";
+import Multiply from "./components/Multiply";
+import Minus from "./components/Minus";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+  <div className="flex flex-col items-center ">
+   <SetValues/>
+      <GetValues/>
+      <AddValues/>
+      <Multiply/>
+      <Minus/>
+
+  </div>
+     
+      
+    </>
   );
 }
 
